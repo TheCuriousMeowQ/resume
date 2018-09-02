@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,9 @@
     <link rel="stylesheet" href="css/layui.css">
     <link rel="stylesheet" href="css/layui.mobile.css">
     <link rel="stylesheet" href="css/iconfont.css">
+    <link rel="stylesheet" href="css/wow/animate.css">
 </head>
+
 <body>
     <!-- 主体 -->
     <div id="main" class="main">
@@ -25,7 +28,7 @@
                     </div>
                     <div class="p-base">
                         <div id="maopao" class="speech-bubble speech-bubble-left">
-                           点击可播放音乐
+                            点击可播放音乐
                         </div>
                         <span style="display: block;"><b>姓名：梁耀辉</b></span><br>
                         <span><b>联系电话：17666010841</b></span>
@@ -87,7 +90,7 @@
             </div> -->
         </div>
         <!-- 个人信息技能栏 -->
-        <div id="skill" class="skill">
+        <div id="skill" class="skill wow slideInLeft">
             <ul id="s_main" class="s-main">
                 <li>
                     <h1>个人介绍</h1>
@@ -129,7 +132,7 @@
             </ul>
         </div>
         <!-- 联系方式栏 -->
-        <div id="contact" class="contact">
+        <div id="contact" class="contact wow bounceInUp">
             <ul class="c_main">
                 <li>
                     <span><i class="iconfont icon-lianxiwomen"></i><b>联系方式</b></span>
@@ -152,10 +155,10 @@
     <script src="js/jQuery1.12.4.js"></script>
     <script src="js/index.js"></script>
     <script src="js/layui.all.js"></script>
+    <script src="js/wow/wow.js"></script>
     <script>
         $(document).ready(function () {
-
-            $('#skill').on('click',function(){
+            $('#skill').on('click', function () {
                 console.log($(this).context);
             });
 
@@ -163,19 +166,22 @@
             var main = $('#main');
             // 0. 变量
             var scroll_top = 0, begin = 0, end = 0, timer = null;
-            window.onscroll = function(){
+            window.onscroll = function () {
                 // 1.1 获取滚动的高度
                 scroll_top = scroll().top;
                 // 1.2 显示和隐藏
-                scroll_top > 0 ? $('#top').show(): $('#top').hide();
+                scroll_top > 0 ? $('#top').show() : $('#top').hide();
                 begin = scroll_top;
+                // if(scroll_top){
+                //     $('#skill').className = "skill wow slideInLeft";
+                // }
             }
             // 2. 监听点击
-            $('#top').on('click',function(){
-                 // 2.1 清除定时器
+            $('#top').on('click', function () {
+                // 2.1 清除定时器
                 clearInterval(timer);
                 console.log($(this));
-                
+
                 // 2.2 开启缓动动画
                 timer = setInterval(function () {
                     begin = begin + (end - begin) / 20;
@@ -189,40 +195,50 @@
                 }, 20);
             });
         });
-        window.onload = function(){
+        window.onload = function () {
             displayTime();
             // 获取需要的标签
             var p_phead_portrait = getId('p_phead_portrait');
             var Miss = getId('Miss');
-            
-            p_phead_portrait.onclick = function(){
+
+            var wow = new WOW({
+                boxClass: 'wow',
+                animateClass: 'animated',
+                offset: 150,
+                mobile: true,
+                live: true
+            });
+
+            wow.init();
+
+            p_phead_portrait.onclick = function () {
                 audioplay();
-               p_phead_portrait.className = 'p-phead-portrait layui-anim layui-anim-scaleSpring';
-               setTimeout(() => {
-                if (p_phead_portrait.className === 'p-phead-portrait layui-anim layui-anim-scaleSpring') {
-                    p_phead_portrait.className = 'p-phead-portrait'
-                }
-               }, 1000);
+                p_phead_portrait.className = 'p-phead-portrait layui-anim layui-anim-scaleSpring';
+                setTimeout(() => {
+                    if (p_phead_portrait.className === 'p-phead-portrait layui-anim layui-anim-scaleSpring') {
+                        p_phead_portrait.className = 'p-phead-portrait'
+                    }
+                }, 1000);
             }
             //冒泡对话
             var maopao = getId('maopao');
             setTimeout(() => {
-               maopao.className = 'speech-bubble speech-bubble-left layui-anim layui-anim-fadeout'
+                maopao.className = 'speech-bubble speech-bubble-left layui-anim layui-anim-fadeout'
             }, 1000);
 
-            layui.use(['carousel','flow'], function () {
+            layui.use(['carousel', 'flow'], function () {
                 var carousel = layui.carousel;
-                 var flow = layui.flow;
+                var flow = layui.flow;
                 //常规轮播
                 carousel.render({
                     elem: '#test1'
                     , arrow: 'always',
-                    width:'100%',
-                    height:'100%',
-                    interval:'1500'
+                    width: '100%',
+                    height: '100%',
+                    interval: '1500'
                 });
 
-                 //图片懒加载
+                //图片懒加载
                 flow.lazyimg();
 
                 //改变下时间间隔、动画类型、高度
@@ -249,10 +265,10 @@
             // }
         }
         // 播放mp3
-        function audioplay(){
+        function audioplay() {
             if (Miss.paused) {
                 Miss.play();
-            }else{
+            } else {
                 Miss.pause();
             }
         }
@@ -280,7 +296,7 @@
             hour.style.transform = 'rotate(' + h * 30 + 'deg)';
             min.style.transform = 'rotate(' + m * 6 + 'deg)';
             second.style.transform = 'rotate(' + s * 6 + 'deg)';
-            
+
             var timer = h + "时-" + s + "分-" + m + "秒";
             // console.log(timer)
         }, 10);
@@ -296,4 +312,5 @@
         // window.onload = displayTime; //当onload事件发生时开始显示时间
     </script>
 </body>
+
 </html>
