@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="stylesheet" href="css/layui.mobile.css">
+    <link rel="stylesheet" href="css/iconfont.css">
+</head>
+<body>
+    <!-- 主体 -->
+    <div id="main" class="main">
+        <!-- 头部信息栏 -->
+        <div id="personal" class="personal">
+            <ul class="p-main">
+                <li>
+                    <div id="p_phead_portrait" class="p-phead-portrait">
+                        <img lay-src="image/hide.jpg" width="100%" height="auto">
+                        <audio id="Miss" src="mp3/竖琴小杏仁 - 犬夜叉_穿越时空的思念（电影原声竖琴改编）.mp3" loop></audio>
+                    </div>
+                    <div class="p-base">
+                        <div id="maopao" class="speech-bubble speech-bubble-left">
+                           点击可播放音乐
+                        </div>
+                        <span style="display: block;"><b>姓名：梁耀辉</b></span><br>
+                        <span><b>联系电话：17666010841</b></span>
+                    </div>
+                </li>
+                <li>
+                    <h1 id="ziye" style="text-align: right;"> <b>职业：前端工程师</b></h1>
+                    <!-- 时间 -->
+                    <div id="timer_txt">
+
+                    </div>
+                    <div id="box">
+                        <img src="image/timer/clock.jpg" width="100%" height="100%" alt="">
+                        <div id="hour">
+                            <img src="image/timer/hour.png" width="100%" height="100%" alt="">
+                        </div>
+                        <div id="min">
+                            <img src="image/timer/minute.png" width="100%" height="100%" alt="">
+                        </div>
+                        <div id="second">
+                            <img src="image/timer/second.png" width="100%" height="100%" alt="">
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 轮播信息栏 -->
+        <div id="round_sowing" class="round-sowing">
+            <div class="layui-carousel" id="test1" lay-filter="test1">
+                <div carousel-item="">
+                    <div>
+                        <img lay-src="image/n1.jpg" width="100%" height="auto" alt="">
+                    </div>
+                    <div>
+                        <img lay-src="image/n2.jpg" width="100%" height="auto" alt="">
+                    </div>
+                    <div>
+                        <img lay-src="image/n3.jpg" width="100%" height="auto" alt="">
+                    </div>
+                    <div>
+                        <img lay-src="image/n4.jpg" width="100%" height="auto" alt="">
+                    </div>
+                    <div>
+                        <img lay-src="image/n5.jpg" width="100%" height="auto" alt="">
+                    </div>
+                    <div>
+                        <img lay-src="image/n6.jpg" width="100%" height="auto" alt="">
+                    </div>
+                    <div>
+                        <img lay-src="image/n7.jpg" width="100%" height="auto" alt="">
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="layui-carousel" id="test2" style="margin-top: 15px;">
+                <div carousel-item="">
+                    <div style="background-color:red">条目1</div>
+                    <div style="background-color:green">条目2</div>
+                </div>
+            </div> -->
+        </div>
+        <!-- 个人信息技能栏 -->
+        <div id="skill" class="skill">
+            <ul id="s_main" class="s-main">
+                <li>
+                    <h1>个人介绍</h1>
+                    <p>个人喜欢图像化</p>
+                </li>
+                <li>
+                    <h1>技能掌握</h1>
+                    <div style="width:100%;height:70%;padding-left: 20px;">
+                        <div style="width:20%;height:100%;float: left;">
+                            <span><b>CSS:</b></span><br>
+                            <span><b>HTML5:</b></span><br>
+                            <span><b>JAVASCRIPT:</b></span><br>
+                            <span><b>JQUERY:</b></span><br>
+                            <span><b>VUE:</b></span>
+                        </div>
+                        <div style="width:60%;height:100%;float: left;">
+                            <div class="layui-progress layui-progress-big" lay-showPercent="true">
+                                <div class="layui-progress-bar" lay-percent="20%"></div>
+                            </div>
+                            <br>
+                            <div class="layui-progress layui-progress-big" lay-showPercent="true">
+                                <div class="layui-progress-bar layui-bg-green" lay-percent="35%"></div>
+                            </div>
+                            <br>
+                            <div class="layui-progress layui-progress-big" lay-showPercent="true">
+                                <div class="layui-progress-bar layui-bg-cyan" lay-percent="55%"></div>
+                            </div>
+                            <br>
+                            <div class="layui-progress layui-progress-big" lay-showPercent="true">
+                                <div class="layui-progress-bar layui-bg-green" lay-percent="75%"></div>
+                            </div>
+                            <br>
+                            <div class="layui-progress layui-progress-big" lay-showPercent="true">
+                                <div class="layui-progress-bar layui-bg-cyan" lay-percent="95%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!-- 联系方式栏 -->
+        <div id="contact" class="contact">
+            <ul class="c_main">
+                <li>
+                    <span><i class="iconfont icon-lianxiwomen"></i><b>联系方式</b></span>
+                    <span><i class="iconfont icon-weixin"></i><b>17666010841(辉)</b></span>
+                    <span><i class="iconfont icon-QQ"></i><b>1501008241</b></span>
+                    <span><i class="iconfont icon-youxiang"></i><b>15728382987@163.com</b></span>
+                </li>
+                <li>
+                    <span style="color:#5FB878"><i class="iconfont icon-tubiao-"></i><b>个性标签</b></span>
+                    <span style="color:#5FB878"><i class="iconfont icon-yuedu"></i><b>科技类、情感类、人性类</b></span>
+                    <span style="color:#5FB878"><i class="iconfont icon-yundong"></i><b>散步</b></span>
+                    <span style="color:#5FB878"><i class="iconfont icon-yinle"></i><b>纯音乐</b></span>
+                </li>
+            </ul>
+        </div>
+        <div id="top" style="display: none;position: absolute;;top:95%;right: 2%;width:50px;height:50px;background: #e2e2e2;text-align: center;line-height: 50px;text-align: center;line-height: 50px;">
+            <i class="layui-icon layui-icon-top" style="font-size:40px;color: #178ee6"></i>
+        </div>
+    </div>
+    <script src="js/jQuery1.12.4.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/layui.all.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#skill').on('click',function(){
+                console.log($(this).context);
+            });
+
+            // 获取高度
+            var main = $('#main');
+            // 0. 变量
+            var scroll_top = 0, begin = 0, end = 0, timer = null;
+            window.onscroll = function(){
+                // 1.1 获取滚动的高度
+                scroll_top = scroll().top;
+                // 1.2 显示和隐藏
+                scroll_top > 0 ? $('#top').show(): $('#top').hide();
+                begin = scroll_top;
+            }
+            // 2. 监听点击
+            $('#top').on('click',function(){
+                 // 2.1 清除定时器
+                clearInterval(timer);
+                console.log($(this));
+                
+                // 2.2 开启缓动动画
+                timer = setInterval(function () {
+                    begin = begin + (end - begin) / 20;
+                    window.scrollTo(0, begin);
+
+                    // 2.3 清除定时器
+                    console.log(begin, end);
+                    if (Math.round(begin) === end) {
+                        clearInterval(timer);
+                    }
+                }, 20);
+            });
+        });
+        window.onload = function(){
+            displayTime();
+            // 获取需要的标签
+            var p_phead_portrait = getId('p_phead_portrait');
+            var Miss = getId('Miss');
+            
+            p_phead_portrait.onclick = function(){
+                audioplay();
+               p_phead_portrait.className = 'p-phead-portrait layui-anim layui-anim-scaleSpring';
+               setTimeout(() => {
+                if (p_phead_portrait.className === 'p-phead-portrait layui-anim layui-anim-scaleSpring') {
+                    p_phead_portrait.className = 'p-phead-portrait'
+                }
+               }, 1000);
+            }
+            //冒泡对话
+            var maopao = getId('maopao');
+            setTimeout(() => {
+               maopao.className = 'speech-bubble speech-bubble-left layui-anim layui-anim-fadeout'
+            }, 1000);
+
+            layui.use(['carousel','flow'], function () {
+                var carousel = layui.carousel;
+                 var flow = layui.flow;
+                //常规轮播
+                carousel.render({
+                    elem: '#test1'
+                    , arrow: 'always',
+                    width:'100%',
+                    height:'100%',
+                    interval:'1500'
+                });
+
+                 //图片懒加载
+                flow.lazyimg();
+
+                //改变下时间间隔、动画类型、高度
+                // carousel.render({
+                //     elem: '#test2'
+                //     , interval: 1800
+                //     , anim: 'fade'
+                //     , height: '100%'
+                // });
+            });
+
+            // 获取高度
+            // var scroll_top = 0;
+            // var skill = getId('skill');
+            // var contact = getId('contact');
+            // window.onscroll = function(){
+            //     scroll_top = scroll().top;
+            //     console.log(scroll_top);
+            //     if(scroll_top == 500){
+            //     //    skill.className = 'skill layui-anim layui-anim-scaleSpring'
+            //     }else if(scroll_top == 700){
+            //     //    contact.className ='contact layui-anim layui-anim-scaleSpring'
+            //     }
+            // }
+        }
+        // 播放mp3
+        function audioplay(){
+            if (Miss.paused) {
+                Miss.play();
+            }else{
+                Miss.pause();
+            }
+        }
+
+        // 时钟
+        // 1. 获取需要的标签
+        var hour = getId("hour");
+        var min = getId("min");
+        var second = getId("second");
+        // 2.开启定时器
+        setInterval(function () {
+            // 2.1 获取当前的时间戳
+            var date = new Date();
+
+            // 2.2 求出总毫秒数
+            var millS = date.getMilliseconds();
+            var s = date.getSeconds() + millS / 1000;
+            var m = date.getMinutes() + s / 60;
+            var h = date.getHours() % 12 + m / 60;
+            // console.log(s);
+            // console.log(m);
+            // console.log(h);
+
+            // 2.3 旋转
+            hour.style.transform = 'rotate(' + h * 30 + 'deg)';
+            min.style.transform = 'rotate(' + m * 6 + 'deg)';
+            second.style.transform = 'rotate(' + s * 6 + 'deg)';
+            
+            var timer = h + "时-" + s + "分-" + m + "秒";
+            // console.log(timer)
+        }, 10);
+
+        // 数字时间
+        // 定义一个函数用以显示当前时间
+        function displayTime() {
+            var elt = getId("timer_txt");
+            var now = new Date(); // 得到当前时间
+            elt.innerHTML = now.toLocaleTimeString(); //让elt来显示它
+            setTimeout(displayTime, 1000); //在1秒后再次执行
+        }
+        // window.onload = displayTime; //当onload事件发生时开始显示时间
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+*{margin: 0;padding: 0;border: none}
+ul,li,ol,p,span{margin: 0;padding: 0;list-style: none}
+html{background: #e0dddd;margin-bottom: 5%}
+/* 框架CSS */
+.main{width: 100%;height: auto;position: relative;}
+/* 个人信息栏 */
+.personal{width: 100%;height: 160px;background: white;-webkit-box-shadow:0 0 10px rgba(0, 204, 204, .5); 
+    -moz-box-shadow:0 0 10px rgba(0, 204, 204, .5);box-shadow:0 0 10px rgba(0, 204, 204, .5);  }
+.p-main{width: 100%;height: 100%;display: block;}
+.p-main li{display: inline-block;width: 49%;height: 100%;overflow: hidden}
+.p-phead-portrait{display: inline-block;margin: 10px;height: 140px;width: 140px;border-radius: 70px;overflow: hidden}
+.p-base{display: inline-block;height: 140px;font-size: 20px;margin: 10px 0;overflow: hidden;}
+/* 冒泡对话框 */
+.speech-bubble {
+  position: relative;
+  background-color: #d4d3d3;
+ 
+  width: 150px;
+  height: 50px;
+  line-height: 50px; /* 垂直居中 */
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-family: sans-serif;
+  margin-left: 20px;
+}
+ 
+.speech-bubble:after {
+  content: '';
+  position: absolute;
+ 
+  width: 0;
+  height: 0;
+ 
+  border: 15px solid;
+}
+.speech-bubble-left:after {
+  border-right-color: #d4d3d3;
+  top: 50%;
+  right: 100%;
+  margin-top: -15px;   
+}
+/* 时间 */
+#timer_txt{position: absolute;right: 130px;margin-top: 70px;}
+#box{position: relative;width: 100px;height: 100px;position: absolute;right: 20px;margin-top: 0.5%;}
+#hour, #min, #second{position: absolute;left: 47.5%;top: 8px;width: 5px;height: 85px;}
+/* 轮播信息栏 */
+.round-sowing{margin-top: 2%;width: 100%;height: 600px;}
+/* 技能栏 */
+.skill{width: 100%;height: 300px;background: white;margin: 10px 0;}
+.s-main{display: block;width: 100%;height: 100%;}
+.s-main li{display: inline-block;width: 49%;height: 100%;margin-left: 0.7%;overflow: hidden;}
+.s-main li h1{margin: 20px;letter-spacing: 20px;}
+.s-main li p{text-indent:2em}
+.s-main li span{display: block;margin-bottom: 2.5%;}
+/* 联系 */
+.contact{width: 100%;height: auto;background: white}
+.c_main{display: block;width: 100%;height: 100%;}
+.c_main li{display: inline-block;width: 39%;height: 100%;padding: 5%}
+.c_main li span{display: block;height: 50px;font-size: 30px;}
